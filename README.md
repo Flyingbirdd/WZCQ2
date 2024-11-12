@@ -1,22 +1,15 @@
-# 基于强化学习训练AI玩王者荣耀
+# AI玩手机游戏
  ## 说明
 一、运行环境win10；win7未测试，估计是可以，还需要添加 PyQt5模块用于截图参考（requirements.txt）。  
 环境配置参考视频 1  
 链接：https://pan.baidu.com/s/1fJRyX-scxbeOJ2lsddTLiA   
 提取码：msr5  
-环境配置参考视频 2（minitouch安装）    
-链接：https://pan.baidu.com/s/1V8VV24Q1U8ajLKXU9HJT2w     
-提取码：rid1  
-二、我用的显卡是gtx 1660 。根据以往经验，需要1060或以上算力的显卡。  
+二、需要1060或以上算力的显卡。  
 三、需要一台打开安卓调试并能玩王者荣耀的手机。  
 四、需要下载[scrcpy](https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md)  的windows版本。 把所有文件解压到项目根目录即可（这是我的笨办法） 。  
-
 五、pyminitouch库运行时会自动安装minitouch。如果无法自动安装则需要手动安装[minitouch](https://github.com/openstf/minitouch) ，比较麻烦。  
 还有，minitouch不支持Android10及以上系统  
-六、本人用的手机分辨率是1080*2160的，本代码并没有针对不同的手机做优化。不同的手机minitouch命令中所描述的位置会有差异，需要对代码做出相应调整，请务必注意。  
-七、注意游戏的布局（摇杆和按键移向两边）务必要一样，可参考B站视频[B站视频](https://www.bilibili.com/video/BV13V411W7aW) 。  
 
- 
 ## 运行游戏AI
   
 1. 下载预训练模型
@@ -51,7 +44,6 @@ Google 云盘
 三、训练  
 预处理完成以后运行 “训练X.py”即可。  
 注意！模型保存路径 在 模型_策略梯度.py 295和296行更改。  
-我的经验是：在原有模型上进行30-40局游戏，训练两轮（会保存两次）即可。
 # 如何训练状态判断模型
 状态判断模型概述
 状态判断模型实际上是一个图像分类神经网络，结构与主模型基本相同，但参数有所不同。一、获取标注数据
